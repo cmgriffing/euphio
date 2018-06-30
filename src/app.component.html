@@ -1,0 +1,56 @@
+<mat-sidenav-container>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav position="end" #addPlaylistMenu >
+      <form>
+        <mat-form-field>
+          <input
+            name="new-playlist-title" 
+            placeholder="Title"
+            matInput
+            [formControl]="newPlaylistTitleCtrl"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-chip-list #chipList class="tag-list">
+            <mat-chip
+              *ngFor="let tag of newPlaylistTags"
+              [selectable]="true"
+              [removable]="true"
+              (removed)="removeTagFromNewPlaylist($event.chip.value)"
+            >
+              {{tag}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+          </mat-chip-list>
+          <input
+            name="new-playlist-tags"
+            placeholder="Add Tags..."
+            matInput
+            #tagInput
+            [matChipInputFor]="chipList"
+            [formControl]="newPlaylistTagCtrl"
+            (matChipInputTokenEnd)="addTagToNewPlaylist($event)"
+          />
+        </mat-form-field>
+        <div class="add-playlist-button-wrapper">
+          <button mat-raised-button (click)="addPlaylist()" color="primary">Add Playlist</button>
+        </div>
+      </form>
+    </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span class="main-title h1">Euphio</span>
+      <span class="spacer"></span>
+      <button (click)="addPlaylistMenu.toggle()" mat-icon-button><mat-icon>add</mat-icon></button>
+    </mat-toolbar>
+    <div>
+      <euphio-playlist
+        *ngFor="let playlist of playlists"
+        [title]="playlist.name"
+        [tags]="playlist.tags"
+        [albums]="playlist?.albums || []"
+        (removed)="playlistRemoved($event)"
+      ></euphio-playlist>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,54 @@
+<div class="playlist-wrapper">
+  <div class="top-area">
+    <mat-toolbar color="accent">
+      <span class="h2">{{title}}</span>
+      <span class="spacer"></span>
+      <mat-menu #playlistMenu="matMenu">
+        <button
+          mat-menu-item
+          class="remove-button"
+          (click)="removePlaylist(title)"
+        >Remove</button>
+      </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="playlistMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-chip-list #chipList class="tag-list">
+      <mat-chip
+        *ngFor="let tag of tags"
+        [selectable]="false"
+        [removable]="false"
+        [style.background-color]="colorService.getTagColor(tag)"
+      >
+        {{tag}}
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div class="albums-wrapper">
+    <div class="albums-button-wrapper">
+      <button
+        class="albums-button"
+        mat-button
+        (click)="showingAlbums = !showingAlbums"
+      >
+        {{filteredAlbums.length}} Albums <span [innerText]="showingAlbums ? '▲' : '▼'"></span>
+      </button>
+    </div>
+    <div class="albums" *ngIf="showingAlbums">
+      <ng-container *ngFor="let album of filteredAlbums">
+        <div class="album-wrapper">
+          <div class="album-inner">
+            <a
+              class="album"
+              (click)="albumClick(album.url, $event)"
+              [style.background-image]="'url(' + album.image + ')'"
+            >
+              <span class="album-name">{{album.name}}</span>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

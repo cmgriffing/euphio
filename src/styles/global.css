@@ -1,0 +1,34 @@
+mat-sidenav {
+  padding: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+mat-icon {
+  font-family: 'Material Icons';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Righteous', cursive;
+}
+
+.main-title {
+  text-transform: uppercase;
+}
