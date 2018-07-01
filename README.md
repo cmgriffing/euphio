@@ -4,11 +4,19 @@ A desktop application made to help you find Bandcamp albums that have multiple  
 
 Bandcamp's search only allows a single tag at a time and some of them get new albums so quickly that it is hard to keep up.
 
+## Prerequisites
+
+Node.js v8.x
+Yarn
+
+## Dev Build Instructions
+
+- Run `yarn` to install dependencies
+- Then run `yarn start` to launch the dev build
+
 ## Attributions
 
 - Snail Icon: Ariane Garoff - https://www.toicon.com/icons/open_crawl
-
-
 
 ## License
 

@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import { enableLiveReload } from 'electron-compile';
+
 import wireUpIpcMain from './ipc/main';
 wireUpIpcMain();
 
@@ -7,9 +8,11 @@ wireUpIpcMain();
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow: Electron.BrowserWindow | null;
 
-const isDevMode = process.execPath.match(/[\\/]electron/);
+const isDevMode = true; //process.execPath.match(/[\\/]electron/);
 
-if (isDevMode) enableLiveReload();
+if (isDevMode) {
+  enableLiveReload();
+}
 
 const createWindow = async () => {
 
@@ -24,7 +27,6 @@ const createWindow = async () => {
 
   // Create the browser window.
   mainWindow = new BrowserWindow(windowSize);
-
   // and load the index.html of the app.
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 

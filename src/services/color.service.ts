@@ -9,7 +9,7 @@ export class ColorService {
   getTagColor(tag) {
     if(!this.tagColorCache[tag]) {
       this.tagColorCache[tag] = randomColor({
-        luminosity: 'bright'
+        luminosity: 'light'
       });
     }
     return this.tagColorCache[tag];

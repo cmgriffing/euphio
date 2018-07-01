@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule, FormControl } from '@angular/forms';
 import { ENTER, COMMA, SPACE } from '@angular/cdk/keycodes';
 
+import { ParserService } from './services/parser.service';
 import { PlaylistService } from './services/playlist.service';
 import { AlbumService } from './services/album.service';
 import { ColorService } from './services/color.service';
@@ -69,8 +70,8 @@ export class AppComponent implements OnInit {
     this.commonSnackBarConfig.verticalPosition = 'top';
   }
 
-  ngOnInit(): void {
-    this.playlists = this.playlistService.getAll();
+  async ngOnInit() {
+    this.playlists = await this.playlistService.getAll();
 
     this.fetchAlbumsForPlaylists();
     setInterval(() => {
@@ -84,11 +85,11 @@ export class AppComponent implements OnInit {
     }
   }
 
-  fetchAlbumsForPlaylists() {
-    this.playlists = this.playlists.map(playlist => {
-      playlist.albums = this.albumService.getAllByTags(playlist.tags);
+  async fetchAlbumsForPlaylists() {
+    this.playlists = await Promise.all(this.playlists.map(async playlist => {
+      playlist.albums = await this.albumService.getAllByTags(playlist.tags);
       return playlist;
-    });
+    }));
   }
 
   addPlaylist() {
@@ -200,6 +201,7 @@ export class AppComponent implements OnInit {
     //PlaylistComponent,
   ],
   providers: [
+    ParserService,
     AlbumService,
     PlaylistService,
     ColorService,

@@ -1,8 +1,8 @@
 {
-  "name": "euphio",
-  "productName": "euphio",
+  "name": "Euphio",
+  "productName": "Euphio",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A Bandcamp scraper for finding new albums tagged with multiple specified tag combinations.",
   "main": "src/index.ts",
   "scripts": {
     "start": "electron-forge start",
@@ -42,7 +42,7 @@
       },
       "windowsStoreConfig": {
         "packageName": "",
-        "name": "euphio"
+        "name": "Euphio"
       }
     }
   },
@@ -73,6 +73,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.2",
+    "electron-local-crash-reporter": "^1.0.2",
     "electron-prebuilt-compile": "2.0.2",
     "node-sass": "^4.9.0",
     "tslint": "^4.2.0",

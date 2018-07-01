@@ -32,16 +32,10 @@ export class PlaylistComponent implements OnChanges {
 
   private hidingAlbumsMap = new Map();
 
-  playlistService;
-  colorService;
-
   constructor(
-    playlistService: PlaylistService,
-    colorService: ColorService,
-  ) {
-    this.playlistService = playlistService;
-    this.colorService = colorService;
-  }
+    private playlistService: PlaylistService,
+    public colorService: ColorService,
+  ) { }
 
   ngOnChanges(changes: SimpleChanges) {
     this.generateFilteredAlbums();

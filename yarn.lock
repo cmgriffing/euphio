@@ -143,6 +143,10 @@ acorn@^2.1.0, acorn@^2.4.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-2.7.0.tgz#ab6e7d9d886aaca8b085bc3312b79a198433f0e7"
 
+adm-zip@^0.4.7:
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/adm-zip/-/adm-zip-0.4.11.tgz#2aa54c84c4b01a9d0fb89bb11982a51f13e3d62a"
+
 agent-base@4, agent-base@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
@@ -978,7 +982,7 @@ balanced-match@^1.0.0:
 
 "bandcamp-tag-scraper@git+https://github.com/cmgriffing/bandcamp-tag-scraper.git":
   version "1.0.0"
-  resolved "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#a6855b77f5d233f687663a1729416fae43fd8abf"
+  resolved "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#a684016d971651a46bd3ba898170cd388af23de4"
   dependencies:
     cheerio "^1.0.0-rc.2"
     nedb "^1.8.0"
@@ -1033,7 +1037,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.1.1, bluebird@^3.3.4, bluebird@^3.4.6, bluebird@^3.5.0:
+bluebird@^3.1.1, bluebird@^3.3.4, bluebird@^3.4.1, bluebird@^3.4.6, bluebird@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
@@ -2069,6 +2073,17 @@ electron-installer-snap@^2.0.0:
     tmp-promise "^1.0.3"
     which "^1.3.0"
     yargs "^11.0.0"
+
+electron-local-crash-reporter@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/electron-local-crash-reporter/-/electron-local-crash-reporter-1.0.2.tgz#7c1dde3769756614417c4a81ba9d851212006882"
+  dependencies:
+    adm-zip "^0.4.7"
+    bluebird "^3.4.1"
+    debug "^2.2.0"
+    request "^2.74.0"
+    rimraf "^2.5.4"
+    semver "^5.3.0"
 
 electron-osx-sign@^0.4.1:
   version "0.4.10"
@@ -4703,7 +4718,7 @@ request@2.81.0, "request@>=2.9.0 <2.82.0":
     tunnel-agent "^0.6.0"
     uuid "^3.0.0"
 
-request@^2.45.0, request@^2.55.0, request@^2.79.0:
+request@^2.45.0, request@^2.55.0, request@^2.74.0, request@^2.79.0:
   version "2.87.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.87.0.tgz#32f00235cd08d482b4d0d68db93a829c0ed5756e"
   dependencies:

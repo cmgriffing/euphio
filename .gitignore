@@ -1,3 +1,5 @@
 node_modules
 out
 *.dat
+.DS_Store
+.vscode
