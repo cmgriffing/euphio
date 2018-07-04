@@ -3,7 +3,7 @@ language: node_js
 node_js: 8
 install:
 - sudo npm install -g yarn
-script: yarn && yarn make
+script: yarn && yarn make --icon=src/assets/icons/mac/icon.icns
 before_deploy:
   - git config --local user.name "Chris Griffing"
   - git config --local user.email "cmgriffing@gmail.com"

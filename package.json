@@ -29,8 +29,7 @@
         ]
       },
       "electronPackagerConfig": {
-        "packageManager": "yarn",
-        "icon": "src/assets/icons/mac/icon.icns"
+        "packageManager": "yarn"
       },
       "electronWinstallerConfig": {
         "name": "euphio"
