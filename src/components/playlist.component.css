@@ -19,6 +19,7 @@ h2 {
 
 .albums-wrapper {
   background: #404040;
+  text-align: center;
 }
 
 .albums-button-wrapper {
@@ -34,7 +35,6 @@ h2 {
 .album-wrapper {
   padding: 0;
   display: inline-block;
-  width: 50%;
   vertical-align: top;
 }
 
@@ -55,6 +55,7 @@ h2 {
   position: relative;
   background-size: cover;
   height: 242px;
+  width: 242px;
 }
 
 .album-name {
