@@ -29,7 +29,8 @@
         ]
       },
       "electronPackagerConfig": {
-        "packageManager": "yarn"
+        "packageManager": "yarn",
+        "icon": "src/assets/icons/mac/icon.icns"
       },
       "electronWinstallerConfig": {
         "name": "euphio"
@@ -73,6 +74,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "electron-forge": "^5.2.2",
+    "electron-icon-maker": "0.0.4",
     "electron-local-crash-reporter": "^1.0.2",
     "electron-prebuilt-compile": "2.0.2",
     "node-sass": "^4.9.0",

@@ -4,9 +4,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      body {
+        background: #303030;
+      }
+
+      @keyframes fadeInAndOut {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+
+      .icon-wrapper {
+        animation-duration: 1s;
+        animation-name: fadeInAndOut;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        width: 242px;
+        height: 242px;
+        margin: 40% auto 0;
+      }
+
+      .icon-wrapper img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
   </head>
-  <body style="overflow: hidden; background-color: rgba(0,0,0,0); margin: 0" >
+  <body style="overflow: hidden; margin: 0" >
     <App/>
+    <div class="icon-wrapper">
+      <img src="./assets/logo.png" />
+    </div>
   </body>
   <script>window.exports = module.exports</script>
   <script src="../node_modules/zone.js/dist/zone.js"></script>
