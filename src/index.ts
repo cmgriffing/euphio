@@ -19,7 +19,7 @@ const createWindow = async () => {
   const windowSize = {
     minWidth: 360,
     minHeight: 500,
-    width: 600,
+    width: 610,
     height: 800,
   };
   if(isDevMode) {
