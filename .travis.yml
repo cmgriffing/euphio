@@ -1,2 +1,14 @@
 os: osx
 language: node_js
+node_js: 8
+install:
+- sudo npm install -g yarn
+script: yarn && yarn make
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: d3ZAI+i9u15acax9I+D4bGSPzodmqd8nNsEu/8wtwTDOOcwFbE8I/AcGJSUIGS4sGAzs8+8KgWUXZJbgDwv/dVvv2DkpqrLoTe2akH9V5nkMTxyWI7evGpMjfHjD1yrlF/EeUWCgU/rcPb7k4ldZJxxBxmjR14qu6BSCFvsPqMrD0kQlFqbF6mt+IHMK0tOhi0jtRQa2pCMJHbKUpoO/QHYT5mlTv10IyQLSx8c+W7EJu6ypbTy+fX60sJcGGwkIC+LzWkFij8b0+Uo/FkJ8oaoGgSlpAZXqy5V5wcNY/RJ/FquawB7u4CjE0XBP9OaHGFu0PZ/iURG24EcFGnMhr+jHVp+4UZZqxScM3w5LrCwo7PMCB/uksEIoVJZD4h6socovDo2KAUckdAOUeqL/j6xotc1GSIOJfeTQgIcvQdy9+8zZCzfWmcD/fcdENx+chhuxVS9KUGfgcyD7Q+QbUTsogacYeEUipfbxva5IIb8ZscmywWK5JSCYtg+IpBL2dhvV+qR9cPUnuKx9eq//ai9nU83Kyn/UbuZhAdqqeMF8ol9yaAMZLRRbos7nZv3dSLv6T/7yf0Brq0obkol6QrCtg9AejOIS9SMoyk8QWW7bmSYHH3mLcLc7joF1zCRMrK2GnlKbzbuIh2Zze6GJra1J/2S9BFlREUIpHbS0oUE=
+  file: euphio-darwin-x64-1.0.0.zip
+  on:
+    repo: cmgriffing/euphio
