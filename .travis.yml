@@ -17,5 +17,4 @@ deploy:
   file: /**/euphio-darwin-x64-*.zip
   name: $PACKAGE_VERSION
   on:
-    repo: cmgriffing/euphio
     branch: development
