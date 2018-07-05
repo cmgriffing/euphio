@@ -1,13 +1,14 @@
 {
-  "name": "Euphio",
+  "name": "euphio",
   "productName": "Euphio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Bandcamp scraper for finding new albums tagged with multiple specified tag combinations.",
   "main": "src/index.ts",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
+    "postmake": "PACKAGE_VERSION=$(cat package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag $PACKAGE_VERSION && git push --tags",
     "publish": "electron-forge publish",
     "lint": "tslint src"
   },
