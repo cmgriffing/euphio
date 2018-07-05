@@ -18,3 +18,4 @@ deploy:
   name: $PACKAGE_VERSION
   on:
     repo: cmgriffing/euphio
+    branch: development
