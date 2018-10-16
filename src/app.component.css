@@ -9,3 +9,14 @@
 .add-playlist-button-wrapper {
   text-align: center;
 }
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: #AAA;
+}
+
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline,
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #AAA;
+}
