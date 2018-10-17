@@ -1004,9 +1004,9 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
-"bandcamp-tag-scraper@git+https://github.com/cmgriffing/bandcamp-tag-scraper.git":
+"bandcamp-tag-scraper@git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#bd826e8":
   version "1.0.0"
-  resolved "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#e83ebb4c320c61903b9410116d2762d2f22596b5"
+  resolved "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#bd826e873071a37005137578b359644d63ac66f3"
   dependencies:
     cheerio "^1.0.0-rc.2"
     nedb "^1.8.0"

@@ -59,7 +59,7 @@
     "@angular/material": "^6.2.1",
     "@angular/platform-browser": "^6.0.4",
     "@angular/platform-browser-dynamic": "^6.0.4",
-    "bandcamp-tag-scraper": "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git",
+    "bandcamp-tag-scraper": "git+https://github.com/cmgriffing/bandcamp-tag-scraper.git#bd826e8",
     "electron-compile": "^6.4.2",
     "electron-devtools-installer": "^2.1.0",
     "electron-squirrel-startup": "^1.0.0",

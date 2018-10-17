@@ -44,7 +44,11 @@ export class PlaylistComponent implements OnChanges {
   generateFilteredAlbums() {
     this.filteredAlbums = this.albums.filter(album => {
       const key = `clicked-${album.url}`;
-      return localStorage.getItem(key) !== 'true';
+      return (
+        localStorage.getItem(key) !== 'true' &&
+        album.longEnough === true &&
+        album.fullyPlayable === true
+      );
     });
   }
 
