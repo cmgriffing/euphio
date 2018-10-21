@@ -7,8 +7,19 @@ script: yarn && yarn make -- --icon=src/assets/icons/mac/icon.icns
 before_deploy:
   - git config --local user.name "Chris Griffing"
   - git config --local user.email "cmgriffing@gmail.com"
-  - yarn set-version-env-nix
-  - git tag "$PACKAGE_VERSION"
+  - yarn set-tag-nix
+
+
+
+
+
+
+
+
+
+
+
+
 deploy:
   skip_cleanup: true
   provider: releases
