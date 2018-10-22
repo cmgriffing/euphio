@@ -6,7 +6,7 @@ const owner = 'cmgriffing';
 const repo = 'euphio';
 const version = process.env.npm_package_version;
 const token = process.env.GITHUB_TOKEN;
-const extension = process.env.ASSET_EXTENSION
+const extension = process.env.ASSET_EXTENSION;
 
 glob(`./out/make/**/*.${extension}`, function(files) {
 
